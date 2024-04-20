@@ -1,1 +1,7 @@
-# Retrieval-Augmented-Generative-Question-Answering
+# Retrieval-Augmented Generative Question Answering (RAG-QA): Testing Multilingual Capabilities
+
+This project demonstrates the application of Retrieval-Augmented Generative Question Answering (GQA) with Pinecone as the vector database and the OpenAI API directly (Briggs, 2023).
+
+The primer prompt, in this case, is rather rule-based, dictating the desired format of the output, including the retrieved sources. A notable aspect of this approach is utilising the multilingual capabilities of the gpt-3.5-turbo model, which is instructed to detect the user input (query) language and respond accordingly in the same language.
+
+While the process was largely successful, it exhibited some inconsistencies. Firstly, immediate correct responses were provided in French, Spanish, Chinese, and Japanese. However, for queries in German and Swedish, the model occasionally responded primarily in English. Due to the lack of documentation, a definitive explanation for this behaviour is currently unavailable. It is hypothesised that this may be related to the quantity and quality of training data in the respective languages, for instance, more people speak French and Chinese than German and Swedish. Secondly, in logographic language systems like Chinese and Japanese, the source (in this case, the project URL) is not always immediately displayed, although it appears if the question is repeated in the same style.
